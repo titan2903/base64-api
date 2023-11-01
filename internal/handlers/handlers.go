@@ -1,14 +1,20 @@
-package handler
+package handlers
 
-import "base64-api/internal/services"
+import (
+	"base64-api/internal/services"
 
-type handler struct {
+	"github.com/labstack/echo"
+)
+
+type handlers struct {
 	svc services.Services
 }
 
 type Handlers interface {
+	EncodeBase64(e echo.Context) error
+	DecodeBase64(e echo.Context) error
 }
 
 func NewHandlers(service services.Services) Handlers {
-	return &handler{svc: service}
+	return &handlers{svc: service}
 }
