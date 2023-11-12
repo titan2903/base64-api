@@ -13,6 +13,7 @@ type handlers struct {
 type Handlers interface {
 	EncodeBase64(e echo.Context) error
 	DecodeBase64(e echo.Context) error
+	HealthCheck(c echo.Context) error
 }
 
 func NewHandlers(service services.Services) Handlers {

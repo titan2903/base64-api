@@ -15,5 +15,7 @@ func NewRoutes() *echo.Echo {
 	e.POST("/v1/base64/encode", handler.EncodeBase64)
 	e.POST("/v1/base64/decode", handler.DecodeBase64)
 
+	e.GET("/v1/healthcheck", handler.HealthCheck)
+
 	return e
 }

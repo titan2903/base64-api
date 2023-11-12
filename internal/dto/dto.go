@@ -1,7 +1,7 @@
 package dto
 
 type EncodeBase64Request struct {
-	Data string `json:"data"`
+	Data string `json:"data" validate:"required"`
 }
 
 type EncodeBase64Response struct {
@@ -9,7 +9,7 @@ type EncodeBase64Response struct {
 }
 
 type DecodeBase64Request struct {
-	Data string `json:"data"`
+	Data string `json:"data" validate:"required"`
 }
 
 type DecodeBase64Response struct {

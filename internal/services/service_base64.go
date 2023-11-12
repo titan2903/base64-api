@@ -4,9 +4,9 @@ import (
 	"encoding/base64"
 )
 
-func (s *services) EncodeBase64(data string) (string, error) {
+func (s *services) EncodeBase64(encodeData string) (string, error) {
 	// Encode data to base64
-	encodedData := base64.StdEncoding.EncodeToString([]byte(data))
+	encodedData := base64.StdEncoding.EncodeToString([]byte(encodeData))
 	return encodedData, nil
 }
 

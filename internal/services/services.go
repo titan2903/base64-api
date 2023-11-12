@@ -4,7 +4,7 @@ type services struct {
 }
 
 type Services interface {
-	EncodeBase64(data string) (string, error)
+	EncodeBase64(encodeData string) (string, error)
 	DecodeBase64(encodedData string) (string, error)
 }
 
